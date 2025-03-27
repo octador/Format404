@@ -1,0 +1,32 @@
+.sidebar {
+    background-color: #f2f2f2;
+    padding: 1rem;
+    width: 250px;
+    border-right: 1px solid #ccc;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.item {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sectionDivider {
+    height: 1px;
+    background-color: #dee2e6;
+    margin: 15px 0;
+}

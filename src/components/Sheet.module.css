@@ -1,0 +1,184 @@
+.sheet {
+    background-color: white;
+    border: 1px solid #dedbdb;
+    border-radius: 3px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropZone {
+    width: 100%;
+    height: 100%;
+    border: 2px dashed #ccc;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1;
+    overflow: auto;
+    background-color: #f9f9f9;
+}
+
+.droppedItem {
+    position: absolute;
+    padding: 10px;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    z-index: 10;
+    cursor: move;
+    user-select: none;
+    transition: box-shadow 0.2s ease, border 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+.selected {
+    border: 2px solid #3498db !important;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+}
+
+.itemContent {
+    flex: 1;
+}
+
+.deleteButton {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    padding: 4px;
+    margin-left: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.droppedItem:hover .deleteButton {
+    opacity: 1;
+}
+
+.deleteButton:hover {
+    background-color: rgba(231, 76, 60, 0.1);
+}
+
+.instructions {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #777;
+    font-size: 0.9rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 4px;
+    z-index: 5;
+}
+
+.instructions kbd {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    color: #333;
+    display: inline-block;
+    font-size: 0.8rem;
+    font-family: monospace;
+    line-height: 1;
+    padding: 2px 4px;
+    white-space: nowrap;
+}
+
+/* Styles pour l'éditeur de texte */
+.textEditor {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+}
+
+.textToolbar {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    border-radius: 4px 4px 0 0;
+    flex-wrap: wrap;
+}
+
+.toolbarButton {
+    background: none;
+    border: none;
+    color: #495057;
+    cursor: pointer;
+    padding: 4px 8px;
+    margin-right: 2px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toolbarButton:hover {
+    background-color: #e9ecef;
+}
+
+.toolbarButton.active {
+    background-color: #e9ecef;
+    color: #007bff;
+}
+
+.divider {
+    width: 1px;
+    height: 20px;
+    background-color: #dee2e6;
+    margin: 0 8px;
+}
+
+.fontSizeSelect {
+    padding: 4px;
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+    margin-right: 8px;
+}
+
+.colorPicker {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.doneButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.doneButton:hover {
+    background-color: #0069d9;
+}
+
+.textArea {
+    padding: 10px;
+    border: none;
+    outline: none;
+    resize: both;
+    min-height: 100px;
+    font-family: inherit;
+    border-radius: 0 0 4px 4px;
+}

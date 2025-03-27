@@ -1,0 +1,46 @@
+.actionBar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    border-radius: 8px;
+    padding: 8px 16px;
+    display: flex;
+    gap: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.actionButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.actionButton:hover:not(.disabled) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.actionButton.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.actionButton span {
+    font-size: 14px;
+}
+
+.divider {
+    width: 1px;
+    height: 24px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 4px;
+}

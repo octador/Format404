@@ -1,0 +1,43 @@
+/* app/components/SheetContainer.module.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sheetWrapper {
+    flex: 1;
+    overflow: hidden;
+}
+
+.presentationMode {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+}
+
+.presentationControls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.presentationMode:hover .presentationControls {
+    opacity: 1;
+}
+
+.presentationContent {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}

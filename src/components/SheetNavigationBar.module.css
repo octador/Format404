@@ -1,0 +1,168 @@
+/* app/components/SheetNavigationBar.module.css */
+.navigationBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+    padding: 8px 16px;
+    height: 50px;
+}
+
+.sheetTabs {
+    display: flex;
+    overflow-x: auto;
+    max-width: 70%;
+    scrollbar-width: thin;
+}
+
+.sheetTabs::-webkit-scrollbar {
+    height: 4px;
+}
+
+.sheetTabs::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+.sheetTab {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    margin-right: 4px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+    position: relative;
+}
+
+.sheetTab:hover {
+    background-color: #d0d0d0;
+}
+
+.sheetTab.active {
+    background-color: #3498db;
+    color: white;
+}
+
+.sheetTitle {
+    margin-right: 8px;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tabActions {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.sheetTab:hover .tabActions {
+    opacity: 1;
+}
+
+.actionButton {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 2px;
+    margin-left: 4px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.actionButton:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.addSheetButton {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: background-color 0.2s;
+}
+
+.addSheetButton:hover {
+    background-color: #2ecc71;
+}
+
+.navigationControls {
+    display: flex;
+    align-items: center;
+}
+
+.navButton {
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.navButton:hover:not(.disabled) {
+    background-color: #e0e0e0;
+}
+
+.navButton.disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.pageIndicator {
+    margin: 0 12px;
+    font-size: 14px;
+    color: #666;
+}
+
+.presentButton {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 16px;
+    transition: background-color 0.2s;
+}
+
+.presentButton:hover {
+    background-color: #c0392b;
+}
+
+.titleInput {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: inherit;
+    font-size: inherit;
+    padding: 2px 4px;
+    outline: none;
+    width: 150px;
+}
+
+.titleInput:focus {
+    border-bottom: 1px solid #3498db;
+}
